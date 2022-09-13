@@ -1,7 +1,52 @@
-/** @type {import('next').NextConfig} */
+/* eslint-disable @typescript-eslint/no-var-requires */
+// @ts-check
+const pwa = require('next-pwa');
+const nextComposePlugins = require('next-compose-plugins');
+// const { i18n } = require('./next-i18next.config.js');
+
+const { APP_PWA } = process.env;
+
+/**
+ * @type {import('next').NextConfig}
+ **/
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-}
+  compiler: {
+    removeConsole: {
+      exclude: ['error'],
+    },
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
 
-module.exports = nextConfig
+    return config;
+  },
+  images: {
+    domains: [
+      'i.pravatar.cc',
+      'ui-avatars.com',
+      'stockwaste-image.s3.ap-southeast-1.amazonaws.com',
+      'stockwaste-image.s3.amazonaws.com',
+    ],
+  },
+  // i18n,
+};
+
+const pwaPlugin = [
+  pwa,
+  {
+    pwa: {
+      dest: 'public',
+      register: true,
+      skipWaiting: true,
+      disable: typeof APP_PWA === 'boolean' ? !APP_PWA : APP_PWA === 'false',
+    },
+  },
+];
+
+const plugins = [pwaPlugin];
+
+module.exports = nextComposePlugins(plugins, nextConfig);

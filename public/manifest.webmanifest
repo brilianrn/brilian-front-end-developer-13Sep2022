@@ -1,0 +1,20 @@
+{
+  "theme_color": "#006551",
+  "background_color": "#F8F9FD",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Resume App",
+  "short_name": "resume-app",
+  "description": "",
+  "iarc_rating_id": "",
+  "related_applications": [],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "url": "/",
+      "description": "Dashboard page initiator"
+    }
+  ]
+}

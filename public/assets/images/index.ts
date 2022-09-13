@@ -1,0 +1,17 @@
+export { default as Aido } from './aido.svg';
+export { default as ArrowBoxRight } from './arrow-box-right.svg';
+export { default as ArrowRightGif } from './arrow-right.gif';
+export { default as ArrowRight } from './arrow-right.svg';
+export { default as Background } from './background.svg';
+export { default as BLK } from './blk.svg';
+export { default as Brilianrn } from './brilianrn.svg';
+export { default as Hactiv8 } from './hacktiv8.svg';
+export { default as ITS } from './its.svg';
+export { default as Mediatech } from './mediatech.svg';
+export { default as Nadi } from './nadi.svg';
+export { default as SB } from './sb.svg';
+export { default as Schema } from './schema.svg';
+export { default as SM } from './sm.svg';
+export { default as Technova } from './technova.svg';
+export { default as User } from './user.svg';
+export { default as Yakult } from './yakult.svg';
