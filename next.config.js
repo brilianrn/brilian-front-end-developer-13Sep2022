@@ -32,7 +32,7 @@ const nextConfig = {
       'stockwaste-image.s3.amazonaws.com',
     ],
   },
-  // i18n,
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 };
 
 const pwaPlugin = [
