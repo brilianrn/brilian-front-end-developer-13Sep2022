@@ -25,12 +25,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: [
-      'i.pravatar.cc',
-      'ui-avatars.com',
-      'stockwaste-image.s3.ap-southeast-1.amazonaws.com',
-      'stockwaste-image.s3.amazonaws.com',
-    ],
+    domains: [],
   },
 };
 
