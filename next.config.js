@@ -27,6 +27,7 @@ const nextConfig = {
   images: {
     domains: [],
   },
+  pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
 };
 
 const pwaPlugin = [
